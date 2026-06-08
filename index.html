@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DipOut — Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #FAF7F2;
+      --card:     #FFFFFF;
+      --accent:   #F5C842;
+      --text:     #1A1A1A;
+      --muted:    #6B6B6B;
+      --border:   #E8E2D8;
+      --radius:   14px;
+      --max:      680px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    .container { max-width: var(--max); margin: 0 auto; }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .app-icon {
+      width: 60px; height: 60px;
+      background: var(--accent);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .app-name { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; }
+    .app-sub  { font-size: 0.875rem; color: var(--muted); margin-top: 2px; }
+
+    /* Card */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.3px;
+    }
+    .updated {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1.5rem 0 0.6rem;
+    }
+    h2:first-of-type { margin-top: 0; }
+    p  { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    li { font-size: 0.95rem; margin-bottom: 0.35rem; }
+    strong { font-weight: 700; }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--accent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2rem;
+    }
+    footer a { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <img src="app-icon.png" class="app-icon" alt="DipOut Icon" />
+      <div>
+        <div class="app-name">DipOut</div>
+        <div class="app-sub">Stop tipping on tax.</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="highlight">🔒 DipOut collects zero personal data. Everything stays on your device.</div>
+
+      <h1>Privacy Policy</h1>
+      <div class="updated">Last updated: June 8, 2026 &nbsp;·&nbsp; DipOut</div>
+
+      <h2>What we collect</h2>
+      <p><strong>Nothing.</strong> DipOut does not collect, transmit, or store any personal data on any server. The app does not use analytics, advertising SDKs, or third-party trackers of any kind.</p>
+
+      <h2>How your data is processed</h2>
+      <ul>
+        <li><strong>Receipt images</strong> you scan or pick from your photo library are processed entirely <strong>on your device</strong> using Apple's Vision framework. Images are never uploaded anywhere and are not retained by the app after processing.</li>
+        <li><strong>Tip history</strong> (calculated totals from past receipts) is stored <strong>only on your device</strong>. It is not synced to our servers, shared with third parties, or backed up by us.</li>
+      </ul>
+
+      <h2>In-App Purchases</h2>
+      <p>DipOut offers a one-time "DipOut Pro" purchase for unlimited scanning. Payments are processed entirely by Apple via the App Store. We never see your payment details. Apple's privacy policy governs that transaction.</p>
+
+      <h2>Permissions we request</h2>
+      <ul>
+        <li><strong>Camera</strong> — used only to scan a receipt you point the camera at. The image is processed on-device and immediately discarded.</li>
+        <li><strong>Photo Library</strong> — used only when you explicitly choose a receipt image through Apple's system picker. The app never reads other photos.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>DipOut is not directed at children under 13 and does not knowingly collect data from them. Since the app collects no data at all, this is automatic.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy ever changes, the "Last updated" date above will change with it.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Email <a href="mailto:dipout.app@gmail.com">dipout.app@gmail.com</a></p>
+    </div>
+
+    <footer>
+      &copy; 2026 DipOut &nbsp;·&nbsp; <a href="support.html">Support</a>
+    </footer>
+
+  </div>
+</body>
+</html>

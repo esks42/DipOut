@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DipOut — Support</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #FAF7F2;
+      --card:     #FFFFFF;
+      --accent:   #F5C842;
+      --text:     #1A1A1A;
+      --muted:    #6B6B6B;
+      --border:   #E8E2D8;
+      --radius:   14px;
+      --max:      680px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    .container { max-width: var(--max); margin: 0 auto; }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .app-icon {
+      width: 60px; height: 60px;
+      background: var(--accent);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .app-name { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; }
+    .app-sub  { font-size: 0.875rem; color: var(--muted); margin-top: 2px; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 { font-size: 1.35rem; font-weight: 800; margin-bottom: 1.25rem; letter-spacing: -0.3px; }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1.5rem 0 0.6rem;
+    }
+    h2:first-of-type { margin-top: 0; }
+    p  { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    li { font-size: 0.95rem; margin-bottom: 0.35rem; }
+    strong { font-weight: 700; }
+
+    .contact-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 0.5rem;
+    }
+    .contact-btn:hover { opacity: 0.85; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2rem;
+    }
+    footer a { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <img src="app-icon.png" class="app-icon" alt="DipOut Icon" />
+      <div>
+        <div class="app-name">DipOut</div>
+        <div class="app-sub">Stop tipping on tax.</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <h1>Support</h1>
+
+      <h2>How it works</h2>
+      <p>Point your camera at a restaurant receipt. DipOut reads the subtotal, tax, and printed tip suggestions, then checks whether the restaurant calculated those tips on the <strong>pre-tax</strong> or <strong>post-tax</strong> total. If they tipped on the tax, it recalculates a fair tip on the subtotal and splits the bill evenly between however many people you choose.</p>
+
+      <h2>Frequently asked questions</h2>
+
+      <p><strong>My receipt isn't scanning correctly.</strong><br>
+      Try scanning in good lighting with the receipt flat on a surface. Tap the shutter button only when the document outline turns solid. You can also tap "Use Photo" to pick an image from your library instead.</p>
+
+      <p><strong>The subtotal or total looks wrong.</strong><br>
+      On the Review screen, tap any number to edit it manually before proceeding to the results.</p>
+
+      <p><strong>What does "tipping on tax" mean?</strong><br>
+      Some restaurants pre-fill tip suggestion amounts by applying the tip percentage to the total (subtotal + tax) rather than just the subtotal. That means you're effectively tipping on your tax — a few extra dollars per meal. DipOut catches this and shows you what the tip would be on the subtotal alone.</p>
+
+      <p><strong>Is my receipt data stored or uploaded?</strong><br>
+      No. All image processing happens on your device using Apple's Vision framework. Nothing is ever sent to a server. See our <a href="index.html">Privacy Policy</a>.</p>
+
+      <p><strong>How do I restore my Pro purchase?</strong><br>
+      On the paywall screen, tap <strong>Restore Purchase</strong>. If you bought DipOut Pro on this Apple ID, it will be restored at no charge.</p>
+
+      <p><strong>I have a question not listed here.</strong><br>
+      Email us — we respond within 1–2 business days.</p>
+
+      <br>
+      <a class="contact-btn" href="mailto:dipout.app@gmail.com">Email Support</a>
+    </div>
+
+    <footer>
+      &copy; 2026 DipOut &nbsp;·&nbsp; <a href="index.html">Privacy Policy</a>
+    </footer>
+
+  </div>
+</body>
+</html>
