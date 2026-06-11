@@ -1,0 +1,41 @@
+{
+  "identifier" : "D1883221-3C3B-45FB-A42D-664FF8D1A823",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "82B648FB-5D0B-42B5-8E65-6B77A75AD7BF",
+      "localizations" : [
+        {
+          "description" : "Unlimited receipt scanning, forever.",
+          "displayName" : "DipOut Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.esks42.dipout.premium.lifetime",
+      "referenceName" : "DipOut Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_compatibilityTimeRate" : {
+      "enabled" : false
+    },
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

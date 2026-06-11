@@ -1,1 +1,11 @@
 PRIVACY.md
+
+.DS_Store
+TempPkg/
+
+# Xcode build & user-specific files
+**/xcuserdata/
+**/*.xcuserstate
+**/DerivedData/
+**/.module-cache/
+**/build/
