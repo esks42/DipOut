@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DipOut — Support</title>
-  <meta name="description" content="Help and frequently asked questions for DipOut." />
+  <title>DipOut — Privacy Policy</title>
+  <meta name="description" content="DipOut collects zero personal data. Everything runs on your device." />
   <link rel="icon" type="image/png" href="app-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,8 +63,12 @@
       font-family: var(--display); font-size: clamp(38px, 6vw, 56px);
       font-weight: 800; letter-spacing: -0.035em; line-height: 1.02;
     }
-    .page-sub { margin-top: 14px; font-size: 17px; color: var(--ink-2); max-width: 480px; }
+    .updated { margin-top: 14px; font-size: 14px; color: var(--ink-2); font-weight: 600; }
 
+    .highlight {
+      background: var(--yellow); border-radius: 18px; padding: 18px 24px;
+      font-family: var(--display); font-weight: 700; font-size: 17px; margin-bottom: 28px;
+    }
     .card {
       background: var(--paper); border-radius: var(--radius);
       padding: 40px 44px; margin-bottom: 24px;
@@ -74,28 +78,15 @@
     h2 {
       font-family: var(--display); font-size: 13px; font-weight: 800;
       text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-2);
-      margin: 28px 0 14px;
+      margin: 28px 0 10px;
     }
     h2:first-of-type { margin-top: 0; }
     p { margin-bottom: 12px; font-size: 16px; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 16px; margin-bottom: 8px; }
     strong { font-weight: 700; }
     a { color: var(--ink); font-weight: 600; }
-
-    .faq { border-top: 1px solid rgba(0,0,0,0.08); padding: 16px 0; }
-    .faq:first-of-type { border-top: 0; padding-top: 0; }
-    .faq h3 { font-family: var(--display); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
-    .faq p { color: var(--ink-2); margin: 0; font-size: 15.5px; }
-    .faq p a { color: var(--ink); }
-
-    .contact-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: var(--yellow); color: var(--ink);
-      padding: 16px 28px; border-radius: 99px;
-      font-family: var(--display); font-size: 16px; font-weight: 800;
-      text-decoration: none; letter-spacing: -0.2px;
-      margin-top: 20px; transition: transform 0.15s;
-    }
-    .contact-btn:hover { transform: scale(1.04); }
 
     footer {
       margin-top: 64px; padding: 32px 0 48px;
@@ -115,7 +106,7 @@
       <a class="wordmark" href="index.html"><img src="app-icon.png" alt="" />DipOut<span class="dot">.</span></a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
         <a class="pill" href="index.html#get">Get the app</a>
       </div>
     </div>
@@ -124,55 +115,47 @@
   <div class="wrap">
 
     <header class="page">
-      <div class="kicker">Help</div>
-      <h1>Support.</h1>
-      <p class="page-sub">Stuck on something? Most answers are below — and email always works.</p>
+      <div class="kicker">Legal</div>
+      <h1>Privacy policy.</h1>
+      <div class="updated">Last updated: June 8, 2026</div>
     </header>
 
+    <div class="highlight">DipOut collects zero personal data. Everything stays on your device.</div>
+
     <div class="card">
-      <h2>How it works</h2>
-      <p>Point your camera at a restaurant receipt. DipOut reads the subtotal, tax, and printed tip suggestions, then checks whether those tips were calculated on the <strong>pre-tax</strong> or <strong>post-tax</strong> total. If the suggestion includes the tax, it recalculates a fair tip on the subtotal and splits the bill evenly between however many people you choose.</p>
+      <h2>What we collect</h2>
+      <p><strong>Nothing.</strong> DipOut does not collect, transmit, or store any personal data on any server. The app does not use analytics, advertising SDKs, or third-party trackers of any kind.</p>
 
-      <h2>Frequently asked questions</h2>
+      <h2>How your data is processed</h2>
+      <ul>
+        <li><strong>Receipt images</strong> you scan or pick from your photo library are processed entirely <strong>on your device</strong> using Apple's Vision framework. Images are never uploaded anywhere and are not retained by the app after processing.</li>
+        <li><strong>Tip history</strong> (calculated totals from past receipts) is stored <strong>only on your device</strong>. It is not synced to our servers, shared with third parties, or backed up by us.</li>
+      </ul>
 
-      <div class="faq">
-        <h3>My receipt isn't scanning correctly.</h3>
-        <p>Try scanning in good lighting with the receipt flat on a surface. Tap the shutter button only when the document outline turns solid. You can also tap "Use Photo" to pick an image from your library instead.</p>
-      </div>
+      <h2>In-app purchases</h2>
+      <p>DipOut offers a one-time "DipOut Pro" purchase for unlimited scanning. Payments are processed entirely by Apple via the App Store. We never see your payment details. Apple's privacy policy governs that transaction.</p>
 
-      <div class="faq">
-        <h3>The subtotal or total looks wrong.</h3>
-        <p>On the Review screen, tap any number to edit it manually before proceeding to the results.</p>
-      </div>
+      <h2>Permissions we request</h2>
+      <ul>
+        <li><strong>Camera</strong> — used only to scan a receipt you point the camera at. The image is processed on-device and immediately discarded.</li>
+        <li><strong>Photo library</strong> — used only when you explicitly choose a receipt image through Apple's system picker. The app never reads other photos.</li>
+      </ul>
 
-      <div class="faq">
-        <h3>What does "tipping on tax" mean?</h3>
-        <p>Some receipts pre-fill tip suggestions by applying the percentage to the total (subtotal + tax) rather than just the subtotal — often simply the payment terminal's default setting. That means you're effectively tipping on your tax. DipOut catches this and shows you what the tip would be on the subtotal alone.</p>
-      </div>
+      <h2>Children</h2>
+      <p>DipOut is not directed at children under 13 and does not knowingly collect data from them. Since the app collects no data at all, this is automatic.</p>
 
-      <div class="faq">
-        <h3>Is my receipt data stored or uploaded?</h3>
-        <p>No. All image processing happens on your device using Apple's Vision framework. Nothing is ever sent to a server. See our <a href="privacy.html">privacy policy</a>.</p>
-      </div>
+      <h2>Changes</h2>
+      <p>If this policy ever changes, the "Last updated" date above will change with it.</p>
 
-      <div class="faq">
-        <h3>How do I restore my Pro purchase?</h3>
-        <p>On the paywall screen, tap <strong>Restore Purchase</strong>. If you bought DipOut Pro on this Apple ID, it will be restored at no charge.</p>
-      </div>
-
-      <div class="faq">
-        <h3>I have a question not listed here.</h3>
-        <p>Email us — we respond within 1–2 business days.</p>
-      </div>
-
-      <a class="contact-btn" href="mailto:dipout.app@gmail.com">Email support</a>
+      <h2>Contact</h2>
+      <p>Questions? Email <a href="mailto:dipout.app@gmail.com">dipout.app@gmail.com</a></p>
     </div>
 
     <footer>
       <div>&copy; 2026 DipOut</div>
       <div class="links">
         <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
         <a href="mailto:dipout.app@gmail.com">Contact</a>
       </div>
     </footer>
