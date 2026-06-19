@@ -3,640 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DipOut — Stop tipping on tax</title>
-  <meta name="description" content="DipOut scans your restaurant receipt, catches tip suggestions computed on the post-tax total, recalculates a fair tip on the subtotal, and splits the bill." />
-  <meta property="og:title" content="DipOut — Stop tipping on tax" />
-  <meta property="og:description" content="Scan any receipt. Catch tip suggestions inflated by tax. Tip the service, not the tax." />
-  <meta property="og:image" content="https://esks42.github.io/DipOut/app-icon.png" />
-  <link rel="icon" type="image/png" href="app-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+  <title>DipOut — Privacy Policy</title>
   <style>
-    :root {
-      --bg:        #E7E5DE;
-      --surface:   #D8D6CF;
-      --paper:     #FFFEFA;
-      --yellow:    #F5C842;
-      --ink:       #181817;
-      --ink-2:     rgba(0,0,0,0.46);
-      --warn:      #A96F08;
-      --warn-deep: #7A5208;
-      --warn-bg:   #FBE2B0;
-      --good:      #059669;
-      --good-deep: #047857;
-      --good-bg:   #D1FAE5;
-      --radius:    28px;
-      --max:       1080px;
-      --display:   "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --body:      -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-      --mono:      ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    ::selection { background: var(--yellow); color: var(--ink); }
+
+    :root {
+      --bg:       #FAF7F2;
+      --card:     #FFFFFF;
+      --accent:   #F5C842;
+      --text:     #1A1A1A;
+      --muted:    #6B6B6B;
+      --border:   #E8E2D8;
+      --radius:   14px;
+      --max:      680px;
+    }
 
     body {
-      font-family: var(--body);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
-      color: var(--ink);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2.5rem 1.25rem 4rem;
     }
 
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-    .money { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
-    h1, h2, h3, .display { font-family: var(--display); }
+    .container { max-width: var(--max); margin: 0 auto; }
 
-    /* ---------- Nav ---------- */
-    nav {
-      position: sticky; top: 0; z-index: 50;
-      background: color-mix(in srgb, var(--bg) 85%, transparent);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
     }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-    .wordmark {
-      display: flex; align-items: center; gap: 10px;
-      font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.5px;
-      color: var(--ink); text-decoration: none;
+    .app-icon {
+      width: 60px; height: 60px;
+      background: var(--accent);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     }
-    .wordmark img { width: 34px; height: 34px; border-radius: 9px; }
-    .wordmark .dot { color: var(--yellow); }
-    .nav-links { display: flex; align-items: center; gap: 28px; }
-    .nav-links a {
-      color: var(--ink-2); text-decoration: none; font-size: 15px; font-weight: 600;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--ink); }
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--ink); color: #fff !important;
-      padding: 10px 20px; border-radius: 99px;
-      font-size: 14px; font-weight: 700; text-decoration: none;
-      transition: transform 0.15s;
-    }
-    .pill:hover { transform: scale(1.04); }
-    .pill svg, .cta svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
-    @media (max-width: 720px) { .nav-links a:not(.pill) { display: none; } }
+    .app-name { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; }
+    .app-sub  { font-size: 0.875rem; color: var(--muted); margin-top: 2px; }
 
-    /* ---------- Hero ---------- */
-    .hero { padding: 64px 0 32px; }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
-    @media (max-width: 880px) { .hero-grid { grid-template-columns: 1fr; gap: 48px; } }
+    /* Card */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+    }
+
     h1 {
-      font-size: clamp(54px, 8vw, 96px);
-      font-weight: 800; line-height: 0.99; letter-spacing: -0.045em;
-      font-variation-settings: "opsz" 96;
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.3px;
     }
-    .h-line { display: block; overflow: hidden; }
-    .h-line span { display: inline-block; transform: translateY(115%); transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1); }
-    .loaded .h-line span { transform: none; }
-    .h-line:nth-child(2) span { transition-delay: 0.09s; }
-    .h-line:nth-child(3) span { transition-delay: 0.18s; }
-    h1 .underline { box-shadow: inset 0 -0.14em 0 var(--yellow); }
-    .hero-sub { margin-top: 24px; font-size: 19px; color: var(--ink-2); max-width: 440px; line-height: 1.55; }
-    .hero-ctas { display: flex; align-items: center; gap: 18px; margin-top: 36px; flex-wrap: wrap; }
-    .cta {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: var(--yellow); color: var(--ink);
-      padding: 18px 32px; border-radius: 99px;
-      font-size: 17px; font-weight: 800; text-decoration: none; letter-spacing: -0.2px;
-      font-family: var(--display);
-      transition: transform 0.15s;
-    }
-    .cta:hover { transform: scale(1.04); }
-    .cta-ghost { color: var(--ink-2); font-size: 15px; font-weight: 600; text-decoration: none; }
-    .cta-ghost:hover { color: var(--ink); }
-
-    /* ---------- Hero receipt + scan ---------- */
-    .scan-wrap { position: relative; max-width: 380px; margin: 0 auto; transform: rotate(1.6deg); }
-    .receipt {
-      position: relative;
-      background: var(--paper);
-      padding: 30px 30px 24px;
-      font-family: var(--mono); font-size: 14.5px; color: var(--ink);
-      box-shadow: 0 30px 70px -28px rgba(0,0,0,0.38);
-      border-radius: 3px 3px 0 0;
-      overflow: hidden;
-    }
-    .tear {
-      height: 12px;
-      background: conic-gradient(from 135deg at 50% 0%, var(--paper) 90deg, transparent 0) top left / 22px 12px repeat-x;
-      filter: drop-shadow(0 14px 18px rgba(0,0,0,0.16));
-    }
-    .r-head { text-align: center; font-weight: 700; letter-spacing: 0.22em; font-size: 15px; }
-    .r-sub { text-align: center; font-size: 11.5px; color: #999; margin-bottom: 14px; }
-    .r-rule { border-top: 2px dashed #D5D0C4; margin: 12px 0; }
-    .r-ln { display: flex; justify-content: space-between; padding: 3px 0; }
-    .r-ln.muted { color: #999; font-size: 12px; }
-    .sr-row { opacity: 0.12; filter: blur(4px); transition: opacity 0.4s, filter 0.4s; }
-    .sr-row.on { opacity: 1; filter: none; }
-    .no-motion .sr-row { opacity: 1; filter: none; }
-
-    .sr-flag { margin: 10px -12px; padding: 9px 12px; border-radius: 6px; color: inherit; transition: background 0.45s, color 0.45s; }
-    .sr-flag .why { font-size: 11.5px; margin-top: 3px; opacity: 0; transition: opacity 0.4s 0.15s; }
-    .done .sr-flag, .no-motion .sr-flag { background: var(--warn-bg); color: var(--warn-deep); }
-    .done .sr-flag .why, .no-motion .sr-flag .why { opacity: 1; }
-    .done .sr-flag .amt, .no-motion .sr-flag .amt { text-decoration: line-through; text-decoration-thickness: 2.5px; }
-
-    .sr-fair {
-      margin: 8px -12px 0; padding: 11px 12px; border-radius: 6px; font-weight: 700;
-      opacity: 0; transform: translateY(6px); transition: all 0.45s 0.5s;
-    }
-    .sr-fair .saved { font-size: 11.5px; font-weight: 400; margin-top: 3px; }
-    .done .sr-fair, .no-motion .sr-fair { opacity: 1; transform: none; background: var(--yellow); }
-
-    .scanline {
-      position: absolute; left: 0; right: 0; top: 0; height: 3px; z-index: 3;
-      background: var(--yellow);
-      box-shadow: 0 0 18px 5px rgba(245, 200, 66, 0.65);
-      opacity: 0; pointer-events: none;
-    }
-    .stamp {
-      position: absolute; z-index: 4; right: 16px; top: 51%;
-      font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: 0.08em;
-      color: #C0392B; border: 4px solid #C0392B; border-radius: 6px;
-      padding: 2px 12px;
-      opacity: 0; transform: rotate(-14deg) scale(2.6);
-      transition: opacity 0.28s cubic-bezier(0.2, 1.2, 0.4, 1) 0.25s, transform 0.28s cubic-bezier(0.2, 1.2, 0.4, 1) 0.25s;
-      mix-blend-mode: multiply;
-    }
-    .done .stamp, .no-motion .stamp { opacity: 0.9; transform: rotate(-14deg) scale(1); }
-
-    /* ---------- Marquee ---------- */
-    .marquee { background: var(--yellow); padding: 14px 0; margin: 72px 0 0; overflow: hidden; white-space: nowrap; }
-    .marquee-track {
-      display: inline-block; animation: scroll 28s linear infinite;
-      font-family: var(--display); font-weight: 800; font-size: 16px; letter-spacing: 0.12em;
-    }
-    .marquee-track span { margin-right: 48px; }
-    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* ---------- Sections ---------- */
-    section { padding: 104px 0 0; }
-    .kicker {
-      font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--ink-2); margin-bottom: 14px; font-family: var(--display);
+    .updated {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
     }
     h2 {
-      font-size: clamp(36px, 5vw, 58px); font-weight: 800;
-      letter-spacing: -0.035em; line-height: 1.02; max-width: 680px;
-      font-variation-settings: "opsz" 60;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1.5rem 0 0.6rem;
+    }
+    h2:first-of-type { margin-top: 0; }
+    p  { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    li { font-size: 0.95rem; margin-bottom: 0.35rem; }
+    strong { font-weight: 700; }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--accent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1rem;
     }
 
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.in { opacity: 1; transform: none; }
-
-    /* ---------- How it works ---------- */
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
-    @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
-    .step { text-align: center; }
-    .step .num {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--ink); color: var(--yellow);
-      font-family: var(--display); font-weight: 800; font-size: 18px; margin-bottom: 18px;
-    }
-    .step h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
-    .step p { color: var(--ink-2); font-size: 15px; margin: 8px auto 26px; max-width: 280px; }
-    .phone {
-      border-radius: 40px; background: var(--ink); padding: 10px;
-      box-shadow: 0 24px 60px -24px rgba(0,0,0,0.35);
-      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-      max-width: 290px; margin: 0 auto;
-    }
-    .step:nth-child(1) .phone { transform: rotate(-2.4deg); }
-    .step:nth-child(3) .phone { transform: rotate(2.4deg); }
-    .step:nth-child(2) .phone { transform: translateY(14px); }
-    .step .phone:hover { transform: translateY(-10px) rotate(0deg); }
-    .phone img { width: 100%; display: block; border-radius: 32px; }
-
-    /* ---------- The math: scroll-scrubbed ---------- */
-    .scrub { position: relative; }
-    .scrub-stage { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; margin-top: 56px; }
-    .m-receipt-wrap { max-width: 420px; transform: rotate(-1.2deg); }
-    .m-receipt {
-      background: var(--paper); border-radius: 3px 3px 0 0; padding: 34px 36px 26px;
-      font-family: var(--mono); font-size: 15px; color: var(--ink);
-      box-shadow: 0 30px 70px -30px rgba(0,0,0,0.32);
-      position: relative; overflow: hidden;
-    }
-    .m-row { transition: opacity 0.45s; }
-    .m-row[data-g] { opacity: 0.14; }
-    .m-row.live { opacity: 1; }
-    .m-flag {
-      background: transparent; color: inherit;
-      margin: 10px -12px; padding: 10px 12px; border-radius: 6px;
-      transition: background 0.5s, color 0.5s, opacity 0.45s;
-    }
-    .m-flag.live { background: var(--warn-bg); color: var(--warn-deep); }
-    .m-flag .why { font-size: 12px; margin-top: 4px; }
-    .m-fair {
-      background: transparent; margin: 8px -12px 0; padding: 12px; border-radius: 6px; font-weight: 700;
-      transition: background 0.5s, opacity 0.45s;
-    }
-    .m-fair.live { background: var(--yellow); }
-    .m-fair .saved { font-size: 12px; font-weight: 400; margin-top: 4px; }
-    .m-keep {
-      display: flex; justify-content: space-between; align-items: baseline;
-      margin-top: 14px; padding-top: 12px; border-top: 2px dashed #D5D0C4;
-      font-weight: 700; transition: opacity 0.45s;
-    }
-    .m-keep .big { font-family: var(--display); font-size: 30px; font-weight: 800; color: #C0392B; letter-spacing: -0.02em; }
-
-    .m-steps-rail { display: flex; gap: 26px; }
-    .m-track { width: 3px; border-radius: 99px; background: rgba(0,0,0,0.10); position: relative; align-self: stretch; display: none; }
-    .m-track-fill { position: absolute; top: 0; left: 0; right: 0; height: 0%; background: var(--yellow); border-radius: 99px; }
-    .can-scrub .m-track { display: block; }
-    .m-steps { display: flex; flex-direction: column; gap: 36px; flex: 1; }
-    .m-step { opacity: 0.22; transition: opacity 0.4s; }
-    .m-step.active { opacity: 1; }
-    .m-step h3 { font-size: 23px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
-    .m-step p { color: var(--ink-2); font-size: 16px; max-width: 400px; }
-
-    @media (min-width: 861px) {
-      .can-scrub .scrub { height: 300vh; }
-      .can-scrub .scrub-pin { position: sticky; top: 0; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-bottom: 4vh; }
-    }
-    @media (max-width: 860px) {
-      .scrub-stage { grid-template-columns: 1fr; gap: 48px; }
-      .m-receipt-wrap { margin: 0 auto; }
-    }
-
-    /* ---------- Privacy ---------- */
-    .privacy-band {
-      background: var(--ink); border-radius: var(--radius); color: #fff;
-      padding: 72px 64px; margin-top: 64px;
-      display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center;
-    }
-    @media (max-width: 860px) { .privacy-band { grid-template-columns: 1fr; padding: 48px 32px; } }
-    .privacy-band h2 { color: #fff; }
-    .privacy-band p { color: rgba(255,255,255,0.6); margin-top: 18px; font-size: 17px; max-width: 460px; }
-    .privacy-list { display: flex; flex-direction: column; gap: 16px; }
-    .privacy-item { display: flex; gap: 14px; align-items: baseline; font-size: 17px; font-weight: 600; }
-    .privacy-item .check { color: var(--yellow); font-weight: 900; }
-    .privacy-band a { color: var(--yellow); }
-
-    /* ---------- Pricing ---------- */
-    .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; max-width: 760px; }
-    @media (max-width: 720px) { .price-grid { grid-template-columns: 1fr; } }
-    .price-card { border-radius: var(--radius); padding: 40px 36px; background: var(--surface); }
-    .price-card.pro { background: var(--yellow); }
-    .price-card .plan { font-family: var(--display); font-weight: 800; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; }
-    .price-card .amount { font-family: var(--display); font-size: 58px; font-weight: 800; letter-spacing: -0.03em; margin: 10px 0 2px; }
-    .price-card .per { font-size: 14px; color: var(--ink-2); font-weight: 600; }
-    .price-card ul { list-style: none; margin-top: 24px; }
-    .price-card li { padding: 7px 0; font-size: 15.5px; font-weight: 600; display: flex; gap: 10px; }
-    .price-card li::before { content: "✓"; font-weight: 900; }
-
-    /* ---------- Final CTA ---------- */
-    .final { text-align: center; padding: 128px 0 40px; }
-    .final .icon { width: 96px; height: 96px; border-radius: 24px; margin-bottom: 28px; box-shadow: 0 20px 50px -20px rgba(0,0,0,0.35); }
-    .final h2 { margin: 0 auto; }
-    .final .hero-ctas { justify-content: center; }
-
+    /* Footer */
     footer {
-      margin-top: 96px; padding: 32px 0 48px;
-      border-top: 1px solid rgba(0,0,0,0.10);
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
-      font-size: 14px; color: var(--ink-2);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2rem;
     }
-    footer .links { display: flex; gap: 24px; }
-    footer a { color: var(--ink-2); text-decoration: none; font-weight: 600; }
-    footer a:hover { color: var(--ink); }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .marquee-track { animation: none; }
-      .reveal, .h-line span { opacity: 1; transform: none; transition: none; }
-    }
+    footer a { color: var(--text); }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <nav>
-    <div class="wrap nav-inner">
-      <a class="wordmark" href="#"><img src="app-icon.png" alt="" />DipOut<span class="dot">.</span></a>
-      <div class="nav-links">
-        <a href="#how">How it works</a>
-        <a href="#math">The math</a>
-        <a href="#privacy">Privacy</a>
-        <a href="support.html">Support</a>
-        <a class="pill" href="#get">
-          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-          App Store
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="wrap hero-grid">
+    <header>
+      <img src="app-icon.png" class="app-icon" alt="DipOut Icon" />
       <div>
-        <h1>
-          <span class="h-line"><span>Stop</span></span>
-          <span class="h-line"><span>tipping</span></span>
-          <span class="h-line"><span><span class="underline">on tax.</span></span></span>
-        </h1>
-        <p class="hero-sub">Many receipts compute their suggested tips on the post-tax total — so you quietly tip on the tax itself. DipOut scans the receipt and catches it.</p>
-        <div class="hero-ctas">
-          <a class="cta" href="#get">
-            <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            Get DipOut
-          </a>
-          <a class="cta-ghost" href="#how">See how it works ↓</a>
-        </div>
+        <div class="app-name">DipOut</div>
+        <div class="app-sub">Stop tipping on tax.</div>
       </div>
+    </header>
 
-      <div class="scan-wrap" id="scanWrap">
-        <div class="receipt" id="scanReceipt" aria-label="Animated demo: DipOut scans a receipt and catches a tip suggestion computed on the post-tax total">
-          <div class="scanline" id="scanline"></div>
-          <div class="stamp" aria-hidden="true">CAUGHT</div>
-          <div class="r-head sr-row">THE BISTRO</div>
-          <div class="r-sub sr-row">TABLE 12 · GUESTS 4</div>
-          <div class="r-rule"></div>
-          <div class="r-ln sr-row"><span>SUBTOTAL</span><span class="money">98.50</span></div>
-          <div class="r-ln sr-row"><span>TAX</span><span class="money">8.74</span></div>
-          <div class="r-ln sr-row"><span>TOTAL</span><span class="money">107.24</span></div>
-          <div class="r-rule"></div>
-          <div class="sr-flag sr-row">
-            <div class="r-ln"><span>SUGG. TIP 20%</span><span class="money amt">21.45</span></div>
-            <div class="why">↑ that's 20% of $107.24 — the post-tax total</div>
-          </div>
-          <div class="sr-fair">
-            <div class="r-ln"><span>FAIR TIP 20%</span><span class="money">19.70</span></div>
-            <div class="saved">20% of the $98.50 subtotal. The other $1.75 was tip on tax.</div>
-          </div>
-        </div>
-        <div class="tear" aria-hidden="true"></div>
-      </div>
+    <div class="card">
+      <div class="highlight">🔒 DipOut collects zero personal data. Everything stays on your device.</div>
+
+      <h1>Privacy Policy</h1>
+      <div class="updated">Last updated: June 8, 2026 &nbsp;·&nbsp; DipOut</div>
+
+      <h2>What we collect</h2>
+      <p><strong>Nothing.</strong> DipOut does not collect, transmit, or store any personal data on any server. The app does not use analytics, advertising SDKs, or third-party trackers of any kind.</p>
+
+      <h2>How your data is processed</h2>
+      <ul>
+        <li><strong>Receipt images</strong> you scan or pick from your photo library are processed entirely <strong>on your device</strong> using Apple's Vision framework. Images are never uploaded anywhere and are not retained by the app after processing.</li>
+        <li><strong>Tip history</strong> (calculated totals from past receipts) is stored <strong>only on your device</strong>. It is not synced to our servers, shared with third parties, or backed up by us.</li>
+      </ul>
+
+      <h2>In-App Purchases</h2>
+      <p>DipOut offers a one-time "DipOut Pro" purchase for unlimited scanning. Payments are processed entirely by Apple via the App Store. We never see your payment details. Apple's privacy policy governs that transaction.</p>
+
+      <h2>Permissions we request</h2>
+      <ul>
+        <li><strong>Camera</strong> — used only to scan a receipt you point the camera at. The image is processed on-device and immediately discarded.</li>
+        <li><strong>Photo Library</strong> — used only when you explicitly choose a receipt image through Apple's system picker. The app never reads other photos.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>DipOut is not directed at children under 13 and does not knowingly collect data from them. Since the app collects no data at all, this is automatic.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy ever changes, the "Last updated" date above will change with it.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Email <a href="mailto:dipout.app@gmail.com">dipout.app@gmail.com</a></p>
     </div>
-  </header>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>SCAN ✦ CATCH ✦ SPLIT</span><span>TIP THE SERVICE, NOT THE TAX</span><span>SCAN ✦ CATCH ✦ SPLIT</span><span>TIP THE SERVICE, NOT THE TAX</span><span>SCAN ✦ CATCH ✦ SPLIT</span><span>TIP THE SERVICE, NOT THE TAX</span><span>SCAN ✦ CATCH ✦ SPLIT</span><span>TIP THE SERVICE, NOT THE TAX</span>
-    </div>
-  </div>
-
-  <section id="how">
-    <div class="wrap">
-      <div class="kicker reveal">How it works</div>
-      <h2 class="reveal">Three taps between you and a fair tip.</h2>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="num">1</div>
-          <h3>Scan</h3>
-          <p>Point your camera at any restaurant receipt. On-device OCR reads it instantly.</p>
-          <div class="phone"><img src="assets/screen-scan.png" alt="DipOut scan screen" loading="lazy" /></div>
-        </div>
-        <div class="step reveal">
-          <div class="num">2</div>
-          <h3>Catch</h3>
-          <p>DipOut checks every printed tip suggestion against the pre-tax subtotal.</p>
-          <div class="phone"><img src="assets/screen-review.png" alt="DipOut review screen showing verified tips" loading="lazy" /></div>
-        </div>
-        <div class="step reveal">
-          <div class="num">3</div>
-          <h3>Split</h3>
-          <p>Recalculate the fair tip and split the bill — shares always sum to the cent.</p>
-          <div class="phone"><img src="assets/screen-results.png" alt="DipOut results screen with bill split" loading="lazy" /></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="math">
-    <div class="scrub" id="scrub">
-      <div class="scrub-pin">
-        <div class="wrap">
-          <div class="kicker">The math</div>
-          <h2>Here's where it hides.</h2>
-          <div class="scrub-stage">
-            <div class="m-receipt-wrap">
-              <div class="m-receipt">
-                <div class="r-head">DIPOUT</div>
-                <div class="r-sub">*** CHECK THE MATH ***</div>
-                <div class="r-rule"></div>
-                <div class="r-ln m-row" data-g="0"><span>SUBTOTAL</span><span class="money">112.00</span></div>
-                <div class="r-ln m-row" data-g="0"><span>TAX</span><span class="money">10.08</span></div>
-                <div class="r-ln m-row" data-g="0"><span>TOTAL</span><span class="money">122.08</span></div>
-                <div class="r-rule"></div>
-                <div class="m-flag m-row" data-g="1">
-                  <div class="r-ln"><span>SUGG. TIP 20%</span><span class="money">24.42</span></div>
-                  <div class="why">↑ that's 20% of $122.08 — the post-tax total</div>
-                </div>
-                <div class="m-fair m-row" data-g="2">
-                  <div class="r-ln"><span>FAIR TIP 20%</span><span class="money">22.40</span></div>
-                  <div class="saved">20% of the $112.00 subtotal.</div>
-                </div>
-                <div class="m-keep m-row" data-g="3">
-                  <span>TIP ON TAX</span><span class="big money">+$2.02</span>
-                </div>
-              </div>
-              <div class="tear" aria-hidden="true"></div>
-            </div>
-            <div class="m-steps-rail">
-              <div class="m-track" aria-hidden="true"><div class="m-track-fill" id="trackFill"></div></div>
-              <div class="m-steps">
-              <div class="m-step" data-s="0">
-                <h3>The receipt reads itself.</h3>
-                <p>DipOut's OCR pulls the subtotal, tax, and total straight off the paper — no typing, no account.</p>
-              </div>
-              <div class="m-step" data-s="1">
-                <h3>Custom is to tip pre-tax.</h3>
-                <p>Gratuity is customarily calculated on the meal, before sales tax. This suggestion ran 20% on $122.08 instead of $112.00 — often just the payment terminal's default setting, but you're still tipping on the tax.</p>
-              </div>
-              <div class="m-step" data-s="2">
-                <h3>Recalculated on the subtotal.</h3>
-                <p>DipOut reruns the same percentage on the pre-tax amount. Same generosity, correct basis.</p>
-              </div>
-              <div class="m-step" data-s="3">
-                <h3>Two dollars tonight. Two hundred a year.</h3>
-                <p>Nobody tips the tax on purpose — but at twice a week, that quiet $2.02 is about $210 a year. DipOut flags it on every receipt. And when you split, exact-cent reconciliation means no one pays the rounding error.</p>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="privacy">
-    <div class="wrap">
-      <div class="privacy-band reveal">
-        <div>
-          <h2>Your receipts never leave your phone.</h2>
-          <p>Everything runs on-device with Apple's Vision framework. Images are processed and immediately discarded — there is no server to send them to. Read the full <a href="privacy.html">privacy policy</a>.</p>
-        </div>
-        <div class="privacy-list">
-          <div class="privacy-item"><span class="check">✓</span> No uploads — 100% on-device OCR</div>
-          <div class="privacy-item"><span class="check">✓</span> No account, no sign-in</div>
-          <div class="privacy-item"><span class="check">✓</span> No analytics, no trackers</div>
-          <div class="privacy-item"><span class="check">✓</span> History stored only on your device</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <div class="wrap">
-      <div class="kicker reveal">Pricing</div>
-      <h2 class="reveal">One coffee. No subscription.</h2>
-      <div class="price-grid">
-        <div class="price-card reveal">
-          <div class="plan">Free</div>
-          <div class="amount money">$0</div>
-          <div class="per">forever</div>
-          <ul>
-            <li>5 free receipt scans</li>
-            <li>Full tip verdict &amp; recalculation</li>
-            <li>Even bill splitting</li>
-          </ul>
-        </div>
-        <div class="price-card pro reveal">
-          <div class="plan">DipOut Pro</div>
-          <div class="amount money">$2.99</div>
-          <div class="per">one-time — yours forever</div>
-          <ul>
-            <li>Unlimited receipt scanning</li>
-            <li>Tip history on your device</li>
-            <li>No subscription, ever</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="final" id="get">
-    <div class="wrap">
-      <img class="icon" src="app-icon.png" alt="DipOut app icon" />
-      <h2 class="reveal">Tip the service,<br />not the tax.</h2>
-      <div class="hero-ctas">
-        <a class="cta" href="#">
-          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-          Download on the App Store
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap">
     <footer>
-      <div>&copy; 2026 DipOut</div>
-      <div class="links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="support.html">Support</a>
-        <a href="mailto:dipout.app@gmail.com">Contact</a>
-      </div>
+      &copy; 2026 DipOut &nbsp;·&nbsp; <a href="support.html">Support</a>
     </footer>
+
   </div>
-
-  <script>
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const desktop = window.matchMedia('(min-width: 861px)');
-
-    requestAnimationFrame(() => document.body.classList.add('loaded'));
-
-    /* ---- scroll reveals ---- */
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.reveal').forEach(el => {
-      if (reduce) el.classList.add('in'); else io.observe(el);
-    });
-
-    /* ---- hero scan animation ---- */
-    const receipt = document.getElementById('scanReceipt');
-    const scanline = document.getElementById('scanline');
-    const rows = Array.from(receipt.querySelectorAll('.sr-row'));
-
-    function runScan() {
-      const H = receipt.clientHeight;
-      const dur = 1700;
-      scanline.style.transition = 'none';
-      scanline.style.transform = 'translateY(0)';
-      scanline.style.opacity = '1';
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        scanline.style.transition = `transform ${dur}ms linear`;
-        scanline.style.transform = `translateY(${H - 3}px)`;
-      }));
-      rows.forEach(r => {
-        const frac = Math.min((r.offsetTop + r.offsetHeight * 0.5) / H, 1);
-        setTimeout(() => r.classList.add('on'), frac * dur);
-      });
-      setTimeout(() => {
-        scanline.style.opacity = '0';
-        receipt.classList.add('done');
-      }, dur + 120);
-    }
-
-    if (reduce) {
-      receipt.classList.add('no-motion');
-    } else {
-      const scanIO = new IntersectionObserver((entries) => {
-        if (entries.some(e => e.isIntersecting)) {
-          scanIO.disconnect();
-          setTimeout(runScan, 500);
-        }
-      }, { threshold: 0.4 });
-      scanIO.observe(receipt);
-    }
-
-    /* ---- scroll-scrubbed math section ---- */
-    const scrub = document.getElementById('scrub');
-    const mRows = Array.from(scrub.querySelectorAll('.m-row'));
-    const mSteps = Array.from(scrub.querySelectorAll('.m-step'));
-    const trackFill = document.getElementById('trackFill');
-    const mWrap = scrub.querySelector('.m-receipt-wrap');
-
-    function setStage(idx) {
-      mRows.forEach(r => r.classList.toggle('live', Number(r.dataset.g) <= idx));
-      mSteps.forEach(s => s.classList.toggle('active', Number(s.dataset.s) === idx));
-    }
-
-    let scrubBound = false;
-    function enableScrub() {
-      document.body.classList.add('can-scrub');
-      if (scrubBound) { window.dispatchEvent(new Event('scroll')); return; }
-      scrubBound = true;
-      let ticking = false;
-      function onScroll() {
-        if (ticking || !document.body.classList.contains('can-scrub')) return;
-        ticking = true;
-        requestAnimationFrame(() => {
-          const rect = scrub.getBoundingClientRect();
-          const total = scrub.offsetHeight - window.innerHeight;
-          const p = Math.min(Math.max(-rect.top / total, 0), 1);
-          setStage(Math.min(Math.floor(p * 4), 3));
-          trackFill.style.height = (p * 100).toFixed(1) + '%';
-          mWrap.style.transform = 'rotate(' + (-1.2 + p * 1.8).toFixed(2) + 'deg) translateY(' + ((0.5 - p) * 28).toFixed(1) + 'px)';
-          ticking = false;
-        });
-      }
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    }
-
-    function staticStage() {
-      document.body.classList.remove('can-scrub');
-      mRows.forEach(r => r.classList.add('live'));
-      mSteps.forEach(s => s.classList.add('active'));
-      mWrap.style.transform = '';
-    }
-
-    if (!reduce && desktop.matches) enableScrub(); else staticStage();
-    desktop.addEventListener('change', (e) => {
-      if (!reduce && e.matches) enableScrub(); else staticStage();
-    });
-  </script>
 </body>
 </html>

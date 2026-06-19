@@ -4,177 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DipOut — Support</title>
-  <meta name="description" content="Help and frequently asked questions for DipOut." />
-  <link rel="icon" type="image/png" href="app-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg:      #E7E5DE;
-      --paper:   #FFFEFA;
-      --yellow:  #F5C842;
-      --ink:     #181817;
-      --ink-2:   rgba(0,0,0,0.46);
-      --radius:  28px;
-      --max:     760px;
-      --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --body:    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    ::selection { background: var(--yellow); color: var(--ink); }
+
+    :root {
+      --bg:       #FAF7F2;
+      --card:     #FFFFFF;
+      --accent:   #F5C842;
+      --text:     #1A1A1A;
+      --muted:    #6B6B6B;
+      --border:   #E8E2D8;
+      --radius:   14px;
+      --max:      680px;
+    }
+
     body {
-      font-family: var(--body); background: var(--bg); color: var(--ink);
-      line-height: 1.7; -webkit-font-smoothing: antialiased;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2.5rem 1.25rem 4rem;
     }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
-    nav {
-      position: sticky; top: 0; z-index: 50;
-      background: color-mix(in srgb, var(--bg) 85%, transparent);
-      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-    .wordmark {
-      display: flex; align-items: center; gap: 10px;
-      font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.5px;
-      color: var(--ink); text-decoration: none;
-    }
-    .wordmark img { width: 34px; height: 34px; border-radius: 9px; }
-    .wordmark .dot { color: var(--yellow); }
-    .nav-links { display: flex; align-items: center; gap: 28px; }
-    .nav-links a { color: var(--ink-2); text-decoration: none; font-size: 15px; font-weight: 600; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--ink); }
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--ink); color: #fff !important;
-      padding: 10px 20px; border-radius: 99px;
-      font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 0.15s;
-    }
-    .pill:hover { transform: scale(1.04); }
-    @media (max-width: 600px) { .nav-links a:not(.pill) { display: none; } }
+    .container { max-width: var(--max); margin: 0 auto; }
 
-    header.page { padding: 56px 0 36px; }
-    .kicker {
-      font-family: var(--display); font-size: 13px; font-weight: 800;
-      letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 12px;
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
     }
-    h1 {
-      font-family: var(--display); font-size: clamp(38px, 6vw, 56px);
-      font-weight: 800; letter-spacing: -0.035em; line-height: 1.02;
+    .app-icon {
+      width: 60px; height: 60px;
+      background: var(--accent);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     }
-    .page-sub { margin-top: 14px; font-size: 17px; color: var(--ink-2); max-width: 480px; }
+    .app-name { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; }
+    .app-sub  { font-size: 0.875rem; color: var(--muted); margin-top: 2px; }
 
     .card {
-      background: var(--paper); border-radius: var(--radius);
-      padding: 40px 44px; margin-bottom: 24px;
-      box-shadow: 0 24px 60px -36px rgba(0,0,0,0.25);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
     }
-    @media (max-width: 600px) { .card { padding: 28px 24px; } }
+
+    h1 { font-size: 1.35rem; font-weight: 800; margin-bottom: 1.25rem; letter-spacing: -0.3px; }
     h2 {
-      font-family: var(--display); font-size: 13px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-2);
-      margin: 28px 0 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1.5rem 0 0.6rem;
     }
     h2:first-of-type { margin-top: 0; }
-    p { margin-bottom: 12px; font-size: 16px; }
+    p  { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    li { font-size: 0.95rem; margin-bottom: 0.35rem; }
     strong { font-weight: 700; }
-    a { color: var(--ink); font-weight: 600; }
-
-    .faq { border-top: 1px solid rgba(0,0,0,0.08); padding: 16px 0; }
-    .faq:first-of-type { border-top: 0; padding-top: 0; }
-    .faq h3 { font-family: var(--display); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
-    .faq p { color: var(--ink-2); margin: 0; font-size: 15.5px; }
-    .faq p a { color: var(--ink); }
 
     .contact-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: var(--yellow); color: var(--ink);
-      padding: 16px 28px; border-radius: 99px;
-      font-family: var(--display); font-size: 16px; font-weight: 800;
-      text-decoration: none; letter-spacing: -0.2px;
-      margin-top: 20px; transition: transform 0.15s;
+      display: inline-block;
+      background: var(--accent);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 0.5rem;
     }
-    .contact-btn:hover { transform: scale(1.04); }
+    .contact-btn:hover { opacity: 0.85; }
 
     footer {
-      margin-top: 64px; padding: 32px 0 48px;
-      border-top: 1px solid rgba(0,0,0,0.10);
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
-      font-size: 14px; color: var(--ink-2);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2rem;
     }
-    footer .links { display: flex; gap: 24px; }
-    footer a { color: var(--ink-2); text-decoration: none; font-weight: 600; }
-    footer a:hover { color: var(--ink); }
+    footer a { color: var(--text); }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <nav>
-    <div class="wrap nav-inner">
-      <a class="wordmark" href="index.html"><img src="app-icon.png" alt="" />DipOut<span class="dot">.</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a class="pill" href="index.html#get">Get the app</a>
+    <header>
+      <img src="app-icon.png" class="app-icon" alt="DipOut Icon" />
+      <div>
+        <div class="app-name">DipOut</div>
+        <div class="app-sub">Stop tipping on tax.</div>
       </div>
-    </div>
-  </nav>
-
-  <div class="wrap">
-
-    <header class="page">
-      <div class="kicker">Help</div>
-      <h1>Support.</h1>
-      <p class="page-sub">Stuck on something? Most answers are below — and email always works.</p>
     </header>
 
     <div class="card">
+      <h1>Support</h1>
+
       <h2>How it works</h2>
-      <p>Point your camera at a restaurant receipt. DipOut reads the subtotal, tax, and printed tip suggestions, then checks whether those tips were calculated on the <strong>pre-tax</strong> or <strong>post-tax</strong> total. If the suggestion includes the tax, it recalculates a fair tip on the subtotal and splits the bill evenly between however many people you choose.</p>
+      <p>Point your camera at a restaurant receipt. DipOut reads the subtotal, tax, and printed tip suggestions, then checks whether the restaurant calculated those tips on the <strong>pre-tax</strong> or <strong>post-tax</strong> total. If they tipped on the tax, it recalculates a fair tip on the subtotal and splits the bill evenly between however many people you choose.</p>
 
       <h2>Frequently asked questions</h2>
 
-      <div class="faq">
-        <h3>My receipt isn't scanning correctly.</h3>
-        <p>Try scanning in good lighting with the receipt flat on a surface. Tap the shutter button only when the document outline turns solid. You can also tap "Use Photo" to pick an image from your library instead.</p>
-      </div>
+      <p><strong>My receipt isn't scanning correctly.</strong><br>
+      Try scanning in good lighting with the receipt flat on a surface. Tap the shutter button only when the document outline turns solid. You can also tap "Use Photo" to pick an image from your library instead.</p>
 
-      <div class="faq">
-        <h3>The subtotal or total looks wrong.</h3>
-        <p>On the Review screen, tap any number to edit it manually before proceeding to the results.</p>
-      </div>
+      <p><strong>The subtotal or total looks wrong.</strong><br>
+      On the Review screen, tap any number to edit it manually before proceeding to the results.</p>
 
-      <div class="faq">
-        <h3>What does "tipping on tax" mean?</h3>
-        <p>Some receipts pre-fill tip suggestions by applying the percentage to the total (subtotal + tax) rather than just the subtotal — often simply the payment terminal's default setting. That means you're effectively tipping on your tax. DipOut catches this and shows you what the tip would be on the subtotal alone.</p>
-      </div>
+      <p><strong>What does "tipping on tax" mean?</strong><br>
+      Some restaurants pre-fill tip suggestion amounts by applying the tip percentage to the total (subtotal + tax) rather than just the subtotal. That means you're effectively tipping on your tax — a few extra dollars per meal. DipOut catches this and shows you what the tip would be on the subtotal alone.</p>
 
-      <div class="faq">
-        <h3>Is my receipt data stored or uploaded?</h3>
-        <p>No. All image processing happens on your device using Apple's Vision framework. Nothing is ever sent to a server. See our <a href="privacy.html">privacy policy</a>.</p>
-      </div>
+      <p><strong>Is my receipt data stored or uploaded?</strong><br>
+      No. All image processing happens on your device using Apple's Vision framework. Nothing is ever sent to a server. See our <a href="index.html">Privacy Policy</a>.</p>
 
-      <div class="faq">
-        <h3>How do I restore my Pro purchase?</h3>
-        <p>On the paywall screen, tap <strong>Restore Purchase</strong>. If you bought DipOut Pro on this Apple ID, it will be restored at no charge.</p>
-      </div>
+      <p><strong>How do I restore my Pro purchase?</strong><br>
+      On the paywall screen, tap <strong>Restore Purchase</strong>. If you bought DipOut Pro on this Apple ID, it will be restored at no charge.</p>
 
-      <div class="faq">
-        <h3>I have a question not listed here.</h3>
-        <p>Email us — we respond within 1–2 business days.</p>
-      </div>
+      <p><strong>I have a question not listed here.</strong><br>
+      Email us — we respond within 1–2 business days.</p>
 
-      <a class="contact-btn" href="mailto:dipout.app@gmail.com">Email support</a>
+      <br>
+      <a class="contact-btn" href="mailto:dipout.app@gmail.com">Email Support</a>
     </div>
 
     <footer>
-      <div>&copy; 2026 DipOut</div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="mailto:dipout.app@gmail.com">Contact</a>
-      </div>
+      &copy; 2026 DipOut &nbsp;·&nbsp; <a href="index.html">Privacy Policy</a>
     </footer>
 
   </div>
